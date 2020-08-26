@@ -22,6 +22,8 @@ sed -i '/tew-692gr[ \t]*)/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/et
 #sed -i '/mt7621[ \t]*|/i\\txiaoyu_xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
 #sed -i '/tew-692gr[ \t]*)/i\\txiaoyu_xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
 
+sed -i '108a/cp -f $(TOPDIR)/vermagic $(LINUX_DIR)/.vermagic' include/kernel-defaults.mk
+
 curl -L https://raw.githubusercontent.com/openwrt/openwrt/93b6cc97ca9694434faef69c6c5145b5dc7c1ae4/target/linux/ramips/dts/mt7621_xiaoyu_xy-c5.dts > target/linux/ramips/dts/xiaoyu_xy-c5.dts
 
 echo 'define Device/xiaoyu_xy-c5
