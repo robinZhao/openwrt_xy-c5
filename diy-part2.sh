@@ -27,7 +27,7 @@ curl -L https://raw.githubusercontent.com/openwrt/openwrt/93b6cc97ca9694434faef6
 echo 'define Device/xiaoyu_xy-c5
   MTK_SOC := mt7621
   DTS := xiaoyu_xy-c5
-  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  IMAGE_SIZE := 32448k
   DEVICE_VENDOR := XiaoYu
   DEVICE_MODEL := XiaoYu XY-C5
   DEVICE_TITLE := XiaoYu XY-C5
