@@ -1,12 +1,12 @@
 # Actions-OpenWrt
 # source 
-src/gz openwrt_core http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/packages
-src/gz openwrt_kmods http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/kmods/4.14.180-1-2e88863ccdd594fb8e842df3c25842ee
-src/gz openwrt_base http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/base
-src/gz openwrt_luci http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/luci
-src/gz openwrt_packages http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/packages
-src/gz openwrt_routing http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/routing
-src/gz openwrt_telephony http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/telephony
+- src/gz openwrt_core http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/packages
+- src/gz openwrt_kmods http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/kmods/4.14.180-1-2e88863ccdd594fb8e842df3c25842ee
+- src/gz openwrt_base http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/base
+- src/gz openwrt_luci http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/luci
+- src/gz openwrt_packages http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/packages
+- src/gz openwrt_routing http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/routing
+- src/gz openwrt_telephony http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/packages/mipsel_24kc/telephony
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
 ![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
