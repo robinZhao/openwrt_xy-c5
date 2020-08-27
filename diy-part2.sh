@@ -33,7 +33,7 @@ echo 'define Device/xiaoyu_xy-c5
   DTS := xiaoyu_xy-c5
   IMAGE_SIZE := 32448k
   DEVICE_VENDOR := XiaoYu
-  DEVICE_MODEL := XiaoYu XY-C5
+  DEVICE_MODEL := XY-C5
   DEVICE_TITLE := XiaoYu XY-C5
   DEVICE_PACKAGES := kmod-ata-core kmod-ata-ahci kmod-usb3 kmod-usb-ledtrig-usbport
   SUPPORTED_DEVICES += xy-c5
