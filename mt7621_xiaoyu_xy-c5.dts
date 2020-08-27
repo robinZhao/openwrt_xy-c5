@@ -1,3 +1,4 @@
+
 /dts-v1/;
 
 #include "mt7621.dtsi"
@@ -7,45 +8,54 @@
 
 / {
 	compatible = "xiaoyu,xy-c5", "mediatek,mt7621-soc";
-	model = "XiaoYu XY-C5";
+	model = "XY-C5";
 
 	aliases {
 		led-boot = &led_sys;
 		led-failsafe = &led_sys;
 		led-running = &led_sys;
 		led-upgrade = &led_sys;
-		label-mac-device = &ethernet;
+		label-mac-device = &ethernet;					   
+	};
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
 	};
 
 	leds {
 		compatible = "gpio-leds";
 
-		work {
+		power {
 			label = "xy-c5:green:work";
-			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 		};
 
 		led_sys: sys {
 			label = "xy-c5:green:sys";
-			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
 		};
+
 	};
 
 	keys {
-		compatible = "gpio-keys";
+		compatible = "gpio-keys-polled";
+		poll-interval = <20>;
 
 		reset {
 			label = "reset";
-			gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 18 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_RESTART>;
 		};
 	};
+
+
 };
+
 
 &spi0 {
 	status = "okay";
 
-	flash@0 {
+	m25p80@0 {
 		compatible = "jedec,spi-nor";
 		reg = <0>;
 		spi-max-frequency = <25000000>;
@@ -86,14 +96,16 @@
 	status = "okay";
 };
 
+
 &ethernet {
 	mtd-mac-address = <&factory 0x4>;
 };
 
-
-&pinctrl  {
-	gpio {
-		groups = "uart3", "wdt";
-		function = "gpio";
+&pinctrl {
+	state_default: pinctrl0 {
+		gpio {
+			ralink,group = "wdt", "rgmii2", "jtag", "mdio";
+			ralink,function = "gpio";
+		};
 	};
 };
