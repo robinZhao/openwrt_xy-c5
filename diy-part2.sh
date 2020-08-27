@@ -24,7 +24,7 @@ sed -i '/tew-692gr[ \t]*)/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/et
 
 #sed -i '108acp -f $(TOPDIR)/vermagic $(LINUX_DIR)/.vermagic' include/kernel-defaults.mk
 
-curl -L https://raw.githubusercontent.com/openwrt/openwrt/93b6cc97ca9694434faef69c6c5145b5dc7c1ae4/target/linux/ramips/dts/mt7621_xiaoyu_xy-c5.dts > target/linux/ramips/dts/xiaoyu_xy-c5.dts
+curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/mt7621_xiaoyu_xy-c5.dts > target/linux/ramips/dts/xiaoyu_xy-c5.dts
 curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/kernel_defaults.mk > include/kernel-defaults.mk
 echo 'define Device/xiaoyu_xy-c5
   MTK_SOC := mt7621
