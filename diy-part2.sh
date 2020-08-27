@@ -23,7 +23,8 @@ sed -i '/tew-692gr[ \t]*)/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/et
 #sed -i '/tew-692gr[ \t]*)/i\\txiaoyu_xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
 
 #sed -i '108acp -f $(TOPDIR)/vermagic $(LINUX_DIR)/.vermagic' include/kernel-defaults.mk
-
+curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/01_leds > target/linux/ramips/base-files/etc/board.d/01_leds
+curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/02_network > target/linux/ramips/base-files/etc/board.d/02_network
 curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/mt7621_xiaoyu_xy-c5.dts > target/linux/ramips/dts/xiaoyu_xy-c5.dts
 curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/kernel_defaults.mk > include/kernel-defaults.mk
 echo 'define Device/xiaoyu_xy-c5
