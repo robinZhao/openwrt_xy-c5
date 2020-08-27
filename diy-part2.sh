@@ -16,8 +16,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 
 set -e
 
-sed -i '/mt7621[ \t]*|/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
-sed -i '/tew-692gr[ \t]*)/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
+#sed -i '/mt7621[ \t]*|/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
+#sed -i '/tew-692gr[ \t]*)/i\\txiaoyu,xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
 # 这两行可有可无
 #sed -i '/mt7621[ \t]*|/i\\txiaoyu_xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
 #sed -i '/tew-692gr[ \t]*)/i\\txiaoyu_xy-c5|\\' target/linux/ramips/base-files/etc/board.d/02_network
