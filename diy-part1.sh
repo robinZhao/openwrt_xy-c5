@@ -15,5 +15,5 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-git clone https://github.com/kuoruan/openwrt-v2ray.git package/v2ray-core
-git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/luci-app-v2ray
+#git clone https://github.com/kuoruan/openwrt-v2ray.git package/v2ray-core
+#git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/luci-app-v2ray
