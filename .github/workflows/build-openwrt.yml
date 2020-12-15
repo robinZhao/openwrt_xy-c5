@@ -26,7 +26,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: v19.07.4
+  REPO_BRANCH: v19.07.5
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
@@ -49,7 +49,7 @@ jobs:
 
     - name: Initialization environment
       env:
-        DEBIAN_FRONTEND: noninteractive
+        DEBIAN_FRONTEND: interactive
       run: |
         sudo rm /etc/apt/sources.list
         sudo cp sources.list  /etc/apt/sources.list
