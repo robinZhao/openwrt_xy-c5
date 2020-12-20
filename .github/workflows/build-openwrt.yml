@@ -90,6 +90,12 @@ jobs:
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
+      
+    - name: Upload config
+      uses: actions/upload-artifact@master
+      with:
+        name: config
+        path: openwrt/config
 
        
     - name: Download package
