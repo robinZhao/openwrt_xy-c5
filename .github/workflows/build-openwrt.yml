@@ -90,6 +90,11 @@ jobs:
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
+    
+    - name: copy config
+      run: |
+        cd openwrt
+        cp .config openwrt/config/
       
     - name: Upload config
       uses: actions/upload-artifact@master
