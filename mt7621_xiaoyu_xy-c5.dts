@@ -17,6 +17,11 @@
 		led-upgrade = &led_sys;
 		label-mac-device = &ethernet;					   
 	};
+	
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x1c000000>, <0x20000000 0x4000000>;
+	};
 
 	chosen {
 		bootargs = "console=ttyS0,115200";
@@ -25,7 +30,7 @@
 	leds {
 		compatible = "gpio-leds";
 
-		power {
+		work {
 			label = "xy-c5:green:work";
 			gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 		};
@@ -34,12 +39,10 @@
 			label = "xy-c5:green:sys";
 			gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
 		};
-
 	};
 
 	keys {
-		compatible = "gpio-keys-polled";
-		poll-interval = <20>;
+		compatible = "gpio-keys";
 
 		reset {
 			label = "reset";
@@ -55,7 +58,7 @@
 &spi0 {
 	status = "okay";
 
-	m25p80@0 {
+	flash@0 {
 		compatible = "jedec,spi-nor";
 		reg = <0>;
 		spi-max-frequency = <25000000>;
@@ -101,11 +104,9 @@
 	mtd-mac-address = <&factory 0x4>;
 };
 
-&pinctrl {
-	state_default: pinctrl0 {
-		gpio {
-			ralink,group = "wdt", "rgmii2", "jtag", "mdio";
-			ralink,function = "gpio";
-		};
+&state_default {
+	gpio {
+		ralink,group = "uart3", "wdt";
+		ralink,function = "gpio";
 	};
 };
