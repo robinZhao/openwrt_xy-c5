@@ -61,7 +61,6 @@ jobs:
    
     - name: Upload bin directory
       uses: actions/upload-artifact@main
-      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: $GITHUB_WORKSPACE/openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64/bin/targets/ramips/mt7621openwrt-21.02.0-rc1-ramips-mt7621-xiaoyu_xy-c5-squashfs-sysupgrade.bin
+        path: $GITHUB_WORKSPACE/openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64/bin/targets/ramips/mt7621/openwrt-21.02.0-rc1-ramips-mt7621-xiaoyu_xy-c5-squashfs-sysupgrade.bin
