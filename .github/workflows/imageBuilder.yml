@@ -24,7 +24,8 @@ on:
 
 env:
   DEVICE_NAME: 'openwrt_xy-c5'
-  FILE_DATE: ''
+#  FILE_DATE: ''
+  TZ: Asia/Shanghai
   
 jobs:
   build:
