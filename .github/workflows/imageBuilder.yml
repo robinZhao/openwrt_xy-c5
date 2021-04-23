@@ -56,7 +56,7 @@ jobs:
         xz -d openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64.tar.xz
         tar -xvf openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64.tar
         cd openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64
-        make image PROFILE=xiaoyu_xy-c5 PACKAGES="luci luci-i18n-base-zh-cn luci-app-adblock luci-app-https-dns-proxy luci-app-samba4 luci-app-upnp luci-app-watchcat luci-app-wol luci-app-hd-idle luci-i18n-adblock-zh-cn luci-i18n-https-dns-proxy-zh-cn luci-i18n-samba4-zh-cn luci-i18n-upnp-zh-cn luci-i18n-watchcat-zh-cn  luci-i18n-wol-zh-cn  luci-i18n-hd-idle-zh-cn ntfs-3g ntfs-3g-low ntfs-3g-utils kmod-fs-ext4 kmod-fs-exfat tcpdump-mini dnsmasq-full -dnsmasq"
+        make image PROFILE=xiaoyu_xy-c5 PACKAGES="luci luci-i18n-base-zh-cn"
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
         sudo mkdir /dist
         sudo chmod 777 /dist
