@@ -52,7 +52,7 @@ jobs:
       run: |
         df -hT $PWD
         cd $GITHUB_WORKSPACE
-        wget https://downloads.openwrt.org/releases/21.02.0-rc1/targets/ramips/mt7621/openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64.tar.xz
+        wget https://downloads.openwrt.org/releases/21.02.0-rc4/targets/ramips/mt7621/openwrt-imagebuilder-21.02.0-rc4-ramips-mt7621.Linux-x86_64.tar.xz
         xz -d openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64.tar.xz
         tar -xvf openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64.tar
         cd openwrt-imagebuilder-21.02.0-rc1-ramips-mt7621.Linux-x86_64
