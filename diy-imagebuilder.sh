@@ -41,3 +41,13 @@ echo 'define Device/xiaoyu_xy-c5
   SUPPORTED_DEVICES += xy-c5
 endef
 TARGET_DEVICES += xiaoyu_xy-c5' >> target/linux/ramips/image/mt7621.mk
+
+echo '
+Target-Profile: DEVICE_xiaoyu_xy-c5
+Target-Profile-Name: xiaoyu-c5
+Target-Profile-Packages: kmod-usb3 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: 
+Target-Profile-Description:
+Build firmware images for xiaoyu_xy-c5
+@@' >> .targetinfo
