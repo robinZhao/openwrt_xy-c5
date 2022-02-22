@@ -28,7 +28,7 @@ curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/02_networ
 curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/mt7621_xiaoyu_xy-c5.dts > target/linux/ramips/dts/xiaoyu_xy-c5.dts
 curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/kernel_defaults.mk > include/kernel-defaults.mk
 #curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/package/kernel/linux/Makefile > package/kernel/linux/Makefile
-curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/.config > .config
+#curl -L https://raw.githubusercontent.com/robinZhao/openwrt_xy-c5/main/.config > .config
 
 echo 'define Device/xiaoyu_xy-c5
   MTK_SOC := mt7621
