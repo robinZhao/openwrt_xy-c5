@@ -1,4 +1,6 @@
 # Actions-OpenWrt
+
+小娱c5 openwrt17.09
 # source 
 - src/gz openwrt_core http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/packages
 - src/gz openwrt_kmods http://mirrors.ustc.edu.cn/openwrt/releases/19.07.3/targets/ramips/mt7621/kmods/4.14.180-1-2e88863ccdd594fb8e842df3c25842ee
